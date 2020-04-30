@@ -1,0 +1,25 @@
+{
+    "name": "hopper",
+    "displayName": "hopper",
+    "description": "Hopper syntax highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hopper",
+            "aliases": ["Hopper", "hopper"],
+            "extensions": [".hop"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hopper",
+            "scopeName": "source.hopper",
+            "path": "./syntaxes/hopper.tmLanguage.json"
+        }]
+    }
+}

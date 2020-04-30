@@ -1,0 +1,264 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Hopper",
+	"patterns": [
+		{
+			"include": "#line_comment"
+		},
+		{
+			"include": "#type_def"
+		},
+		{
+			"include": "#import"
+		},
+		{
+			"include": "#expose"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#func_call"
+		},
+		{
+			"include": "#mod_chain"
+		},
+		{
+			"include": "#constructor"
+		},
+		{
+			"include": "#sig_type"
+		},
+		{
+			"include": "#vars"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"func_call": {
+			"comment": "Function call (adapted from Rust)",
+			"match": "\\b([a-z][A-Za-z0-9_]*|_[A-Za-z0-9_]+)\\s*\\(",
+			"captures": {
+				"1": {
+					"name": "entity.name.function.hopper"
+				}
+			}
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.hopper",
+				"match": "\\b(type|match|if|else|let|in|proc|do|then|module|import|file|from|expose|with)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.hopper",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hopper",
+					"match": "\\\\."
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"comment": "Byte operators",
+					"match": "(\\+|\\-|\\*|/|<|>|=|(<=)|(>=))&",
+					"name": "keyword.operator.hopper"
+				},
+				{
+					"comment": "Float operators",
+					"match": "(\\+|\\-|\\*|/|<|>|=|(<=)|(>=))\\.",
+					"name": "keyword.operator.hopper"
+				},
+				{
+					"comment": "Int operators",
+					"match": "(\\+|\\-|\\*|/|<|>|(<=)|(>=))",
+					"name": "keyword.operator.hopper"
+				},
+				{
+					"match": "(->|=|\\\\)",
+					"name": "keyword.operator.hopper"
+				}
+			]
+		},
+		"numbers": {
+			"name": "constant.numeric.hopper",
+			"match": "[0-9]+((:?\\.[0-9]*)|b)?"
+		},
+		"sig_type": {
+			"begin": ":",
+			"end": "\\)|=|,",
+			"patterns": [
+				{
+					"include": "#line_comment"
+				},
+				{
+					"include": "#parens_type"
+				},
+				{
+					"include": "#type"
+				}
+			]
+		},
+		"type_def": {
+			"begin": "\\b(type)\\b",
+			"end": "}",
+			"patterns": [
+				{
+					"include": "#line_comment"
+				},
+				{
+					"begin": "\\b([A-Z][A-Za-z0-9_]*)\\b\\s*\\(",
+					"end": "\\)",
+					"beginCaptures": {
+						"1": {
+							"name": "constant.hopper"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#line_comment"
+						},
+						{
+							"include": "#parens_type"
+						},
+						{
+							"include": "#type"
+						}
+					]
+				},
+				{
+					"include": "#type"
+				}
+			],
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.foo.hopper"
+				}
+			}
+		},
+		"parens_type": {
+			"begin": "\\(",
+			"end": "\\)",
+			"patterns": [
+				{
+					"include": "#parens_type"
+				},
+				{
+					"include": "#type"
+				}
+			]
+		},
+		"type": {
+			"patterns": [
+				{
+					"match": "\\b[A-Z][A-Za-z0-9_]*\\b",
+					"name": "storage.type.hopper"
+				},
+				{
+					"comment": "Type parameters",
+					"match": "\\b[a-z][A-Za-z0-9_]*\\b",
+					"name": "variable.parameter.hopper"
+				}
+			]
+		},
+		"vars": {
+			"match": "\\b[a-z][A-Za-z0-9_]*\\b",
+			"name": "source.hopper"
+		},
+		"line_comment": {
+			"begin": "//",
+			"end": "$",
+			"name": "comment.line.double-slash.hopper"
+		},
+		"mod_chain": {
+			"match": "\\b([A-Z][A-Za-z0-9_]*\\.)+",
+			"name": "source.hopper"
+		},
+		"constructor": {
+			"match": "\\b[A-Z][A-Za-z0-9_]*\\b",
+			"name": "constant.hopper"
+		},
+		"import": {
+			"match": "\\b(import|module)\\b\\s*\\b([A-Z][A-Za-z0-9_]*)\\b",
+			"captures": {
+				"1": {
+					"name": "keyword.hopper"
+				},
+				"2": {
+					"name": "source.hopper"
+				}
+			}
+		},
+		"expose": {
+			"begin": "\\b(expose)\\b\\s*{",
+			"end": "}",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.hopper"
+				}
+			},
+			"name": "meta.import.hopper",
+			"patterns": [
+				{
+					"include": "#line_comment"
+				},
+				{
+					"include": "#import"
+				},
+				{
+					"include": "#expose"
+				},
+				{
+					"include": "#type_expose"
+				}
+			]
+		},
+		"type_expose": {
+			"patterns": [
+				{
+					"begin": "\\b([A-Z][A-Za-z0-9_]*)\\b\\s*{",
+					"end": "}",
+					"beginCaptures": {
+						"1": {
+							"name": "storage.type.hopper"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#line_comment"
+						},
+						{
+							"match": "\\b([A-Z][A-Za-z0-9_]*)\\b",
+							"captures": {
+								"1": {
+									"name": "constant.hopper"
+								}
+							}
+						}
+					]
+				},
+				{
+					"match": "\\b([A-Z][A-Za-z0-9_]*)\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type.hopper"
+						}
+					}
+				}
+			]
+		}
+	},
+	"scopeName": "source.hopper"
+}
