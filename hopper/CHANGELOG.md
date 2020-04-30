@@ -1,9 +1,6 @@
 # Change Log
 
-All notable changes to the "hopper" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
 
-- Initial release
+- Add "Hopper" syntax highlighting.
+- Add "Hopper Representation-Specialized IR" syntax highlighting.

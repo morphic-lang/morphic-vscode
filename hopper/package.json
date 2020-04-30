@@ -10,16 +10,31 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "hopper",
-            "aliases": ["Hopper", "hopper"],
-            "extensions": [".hop"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "hopper",
-            "scopeName": "source.hopper",
-            "path": "./syntaxes/hopper.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "hopper",
+                "aliases": ["Hopper", "hopper"],
+                "extensions": [".hop"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "hopper-spec-ir",
+                "aliases": ["Hopper Representation-Specialized IR"],
+                "extensions": [".repr-spec-ir"],
+                "configuration": "./repr-spec-ir-language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "hopper",
+                "scopeName": "source.hopper",
+                "path": "./syntaxes/hopper.tmLanguage.json"
+            },
+            {
+                "language": "hopper-spec-ir",
+                "scopeName": "source.spec-ir",
+                "path": "./syntaxes/hopper-spec-ir.tmLanguage.json"
+            }
+        ]
     }
 }
