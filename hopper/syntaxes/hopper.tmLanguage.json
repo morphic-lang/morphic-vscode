@@ -12,6 +12,9 @@
 			"include": "#import"
 		},
 		{
+			"include": "#with"
+		},
+		{
 			"include": "#expose"
 		},
 		{
@@ -205,6 +208,25 @@
 					"name": "source.hopper"
 				}
 			}
+		},
+		"with": {
+			"begin": "\\b(with)\\b\\s*{",
+			"end": "}",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.hopper"
+				}
+			},
+			"name": "meta.import.hopper",
+			"patterns": [
+				{
+					"include": "#line_comment"
+				},
+				{
+					"match": "=",
+					"name": "keyword.operator.hopper"
+				}
+			]
 		},
 		"expose": {
 			"begin": "\\b(expose)\\b\\s*{",
