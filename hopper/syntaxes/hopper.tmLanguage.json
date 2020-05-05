@@ -167,6 +167,11 @@
 					"name": "storage.type.hopper"
 				},
 				{
+					"comment": "'proc' keyword",
+					"match": "\\bproc\\b",
+					"name": "keyword.hopper"
+				},
+				{
 					"comment": "Type parameters",
 					"match": "\\b[a-z][A-Za-z0-9_]*\\b",
 					"name": "variable.parameter.hopper"
