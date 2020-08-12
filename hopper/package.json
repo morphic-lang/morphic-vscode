@@ -1,7 +1,7 @@
 {
-    "name": "hopper",
-    "displayName": "hopper",
-    "description": "Hopper syntax highlighting",
+    "name": "morphic",
+    "displayName": "morphic",
+    "description": "Morphic syntax highlighting",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.44.0"
@@ -12,28 +12,28 @@
     "contributes": {
         "languages": [
             {
-                "id": "hopper",
-                "aliases": ["Hopper", "hopper"],
-                "extensions": [".hop"],
+                "id": "morphic",
+                "aliases": ["Morphic", "morphic"],
+                "extensions": [".mor"],
                 "configuration": "./language-configuration.json"
             },
             {
-                "id": "hopper-spec-ir",
-                "aliases": ["Hopper Representation-Specialized IR"],
+                "id": "morphic-spec-ir",
+                "aliases": ["Morphic Representation-Specialized IR"],
                 "extensions": [".repr-spec-ir"],
                 "configuration": "./repr-spec-ir-language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "hopper",
-                "scopeName": "source.hopper",
-                "path": "./syntaxes/hopper.tmLanguage.json"
+                "language": "morphic",
+                "scopeName": "source.morphic",
+                "path": "./syntaxes/morphic.tmLanguage.json"
             },
             {
-                "language": "hopper-spec-ir",
+                "language": "morphic-spec-ir",
                 "scopeName": "source.spec-ir",
-                "path": "./syntaxes/hopper-spec-ir.tmLanguage.json"
+                "path": "./syntaxes/morphic-spec-ir.tmLanguage.json"
             }
         ]
     }

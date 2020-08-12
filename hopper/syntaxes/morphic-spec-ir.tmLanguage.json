@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Hopper Representation-Specialized IR",
+  "name": "Morphic Representation-Specialized IR",
   "scopeName": "source.spec-ir",
 	"patterns": [
     {
@@ -29,7 +29,7 @@
     "line_comment": {
 			"begin": "//",
 			"end": "$",
-			"name": "comment.line.double-slash.hopper"
+			"name": "comment.line.double-slash.morphic"
     },
     "func": {
       "match": "\\b([A-Za-z0-9_\\.]+)(\\#)([0-9]+)\\b",

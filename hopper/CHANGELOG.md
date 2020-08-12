@@ -2,5 +2,5 @@
 
 ## [Unreleased]
 
-- Add "Hopper" syntax highlighting.
-- Add "Hopper Representation-Specialized IR" syntax highlighting.
+- Add "Morphic" syntax highlighting.
+- Add "Morphic Representation-Specialized IR" syntax highlighting.

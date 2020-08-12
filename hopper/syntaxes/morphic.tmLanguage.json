@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Hopper",
+	"name": "Morphic",
 	"patterns": [
 		{
 			"include": "#line_comment"
@@ -51,23 +51,23 @@
 			"match": "\\b([a-z][A-Za-z0-9_]*|_[A-Za-z0-9_]+)\\s*\\(",
 			"captures": {
 				"1": {
-					"name": "entity.name.function.hopper"
+					"name": "entity.name.function.morphic"
 				}
 			}
 		},
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.hopper",
+				"name": "keyword.morphic",
 				"match": "\\b(type|match|if|else|let|in|proc|do|then|module|import|file|from|expose|with)\\b"
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.hopper",
+			"name": "string.quoted.double.morphic",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.hopper",
+					"name": "constant.character.escape.morphic",
 					"match": "\\\\."
 				}
 			]
@@ -77,26 +77,26 @@
 				{
 					"comment": "Byte operators",
 					"match": "(\\+|\\-|\\*|/|<|>|=|(<=)|(>=))&",
-					"name": "keyword.operator.hopper"
+					"name": "keyword.operator.morphic"
 				},
 				{
 					"comment": "Float operators",
 					"match": "(\\+|\\-|\\*|/|<|>|=|(<=)|(>=))\\.",
-					"name": "keyword.operator.hopper"
+					"name": "keyword.operator.morphic"
 				},
 				{
 					"comment": "Int operators",
 					"match": "(\\+|\\-|\\*|/|<|>|(<=)|(>=))",
-					"name": "keyword.operator.hopper"
+					"name": "keyword.operator.morphic"
 				},
 				{
 					"match": "(->|=|\\\\)",
-					"name": "keyword.operator.hopper"
+					"name": "keyword.operator.morphic"
 				}
 			]
 		},
 		"numbers": {
-			"name": "constant.numeric.hopper",
+			"name": "constant.numeric.morphic",
 			"match": "[0-9]+((:?\\.[0-9]*)|b)?"
 		},
 		"sig_type": {
@@ -126,7 +126,7 @@
 					"end": "\\)",
 					"beginCaptures": {
 						"1": {
-							"name": "constant.hopper"
+							"name": "constant.morphic"
 						}
 					},
 					"patterns": [
@@ -147,7 +147,7 @@
 			],
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.foo.hopper"
+					"name": "keyword.foo.morphic"
 				}
 			}
 		},
@@ -167,45 +167,45 @@
 			"patterns": [
 				{
 					"match": "\\b[A-Z][A-Za-z0-9_]*\\b",
-					"name": "storage.type.hopper"
+					"name": "storage.type.morphic"
 				},
 				{
 					"comment": "'proc' keyword",
 					"match": "\\bproc\\b",
-					"name": "keyword.hopper"
+					"name": "keyword.morphic"
 				},
 				{
 					"comment": "Type parameters",
 					"match": "\\b[a-z][A-Za-z0-9_]*\\b",
-					"name": "variable.parameter.hopper"
+					"name": "variable.parameter.morphic"
 				}
 			]
 		},
 		"vars": {
 			"match": "\\b[a-z][A-Za-z0-9_]*\\b",
-			"name": "source.hopper"
+			"name": "source.morphic"
 		},
 		"line_comment": {
 			"begin": "//",
 			"end": "$",
-			"name": "comment.line.double-slash.hopper"
+			"name": "comment.line.double-slash.morphic"
 		},
 		"mod_chain": {
 			"match": "\\b([A-Z][A-Za-z0-9_]*\\.)+",
-			"name": "source.hopper"
+			"name": "source.morphic"
 		},
 		"constructor": {
 			"match": "\\b[A-Z][A-Za-z0-9_]*\\b",
-			"name": "constant.hopper"
+			"name": "constant.morphic"
 		},
 		"import": {
 			"match": "\\b(import|module)\\b\\s*\\b([A-Z][A-Za-z0-9_]*)\\b",
 			"captures": {
 				"1": {
-					"name": "keyword.hopper"
+					"name": "keyword.morphic"
 				},
 				"2": {
-					"name": "source.hopper"
+					"name": "source.morphic"
 				}
 			}
 		},
@@ -214,17 +214,17 @@
 			"end": "}",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.hopper"
+					"name": "keyword.morphic"
 				}
 			},
-			"name": "meta.import.hopper",
+			"name": "meta.import.morphic",
 			"patterns": [
 				{
 					"include": "#line_comment"
 				},
 				{
 					"match": "=",
-					"name": "keyword.operator.hopper"
+					"name": "keyword.operator.morphic"
 				}
 			]
 		},
@@ -233,10 +233,10 @@
 			"end": "}",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.hopper"
+					"name": "keyword.morphic"
 				}
 			},
-			"name": "meta.import.hopper",
+			"name": "meta.import.morphic",
 			"patterns": [
 				{
 					"include": "#line_comment"
@@ -259,7 +259,7 @@
 					"end": "}",
 					"beginCaptures": {
 						"1": {
-							"name": "storage.type.hopper"
+							"name": "storage.type.morphic"
 						}
 					},
 					"patterns": [
@@ -270,7 +270,7 @@
 							"match": "\\b([A-Z][A-Za-z0-9_]*)\\b",
 							"captures": {
 								"1": {
-									"name": "constant.hopper"
+									"name": "constant.morphic"
 								}
 							}
 						}
@@ -280,12 +280,12 @@
 					"match": "\\b([A-Z][A-Za-z0-9_]*)\\b",
 					"captures": {
 						"1": {
-							"name": "storage.type.hopper"
+							"name": "storage.type.morphic"
 						}
 					}
 				}
 			]
 		}
 	},
-	"scopeName": "source.hopper"
+	"scopeName": "source.morphic"
 }

@@ -1,3 +1,3 @@
-# Hopper README
+# Morphic README
 
-This extension provides syntax highlighting for the "Hopper" research language (name provisional).
+This extension provides syntax highlighting for the "Morphic" research language.
