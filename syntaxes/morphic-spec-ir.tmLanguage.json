@@ -70,7 +70,7 @@
           "name": "keyword.operator.spec-ir"
         },
         {
-          "match": "\\b(func|variant|custom|mut|immut|call|branch|let|in|tuple|field|type|wrap|unwrap|item|len|push|pop|replace|input|output)\\b",
+          "match": "\\b(func|variant|custom|mut|immut|call|branch|let|in|tuple|field|type|wrap|unwrap|item|len|push|pop|replace|input|output|panic)\\b",
           "name": "keyword.spec-ir"
         }
       ]
