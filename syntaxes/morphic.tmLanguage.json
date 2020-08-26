@@ -75,6 +75,10 @@
 		"operators": {
 			"patterns": [
 				{
+					"match": "(->|=|\\\\|<\\||\\|>)",
+					"name": "keyword.operator.morphic"
+				},
+				{
 					"comment": "Byte operators",
 					"match": "(\\+|\\-|\\*|/|<|>|=|(<=)|(>=))&",
 					"name": "keyword.operator.morphic"
@@ -87,10 +91,6 @@
 				{
 					"comment": "Int operators",
 					"match": "(\\+|\\-|\\*|/|<|>|(<=)|(>=))",
-					"name": "keyword.operator.morphic"
-				},
-				{
-					"match": "(->|=|\\\\)",
 					"name": "keyword.operator.morphic"
 				}
 			]
