@@ -6,6 +6,9 @@
 			"include": "#line_comment"
 		},
 		{
+			"include": "#pub_keyword"
+		},
+		{
 			"include": "#type_def"
 		},
 		{
@@ -122,6 +125,9 @@
 					"include": "#line_comment"
 				},
 				{
+					"include": "#pub_keyword"
+				},
+				{
 					"begin": "\\b([A-Z][A-Za-z0-9_]*)\\b\\s*\\(",
 					"end": "\\)",
 					"beginCaptures": {
@@ -147,7 +153,7 @@
 			],
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.foo.morphic"
+					"name": "keyword.morphic"
 				}
 			}
 		},
@@ -189,6 +195,10 @@
 			"begin": "//",
 			"end": "$",
 			"name": "comment.line.double-slash.morphic"
+		},
+		"pub_keyword": {
+			"match": "\\bpub\\b",
+			"name": "keyword.morphic"
 		},
 		"mod_chain": {
 			"match": "\\b([A-Z][A-Za-z0-9_]*\\.)+",
@@ -242,6 +252,9 @@
 					"include": "#line_comment"
 				},
 				{
+					"include": "#pub_keyword"
+				},
+				{
 					"include": "#import"
 				},
 				{
@@ -265,6 +278,9 @@
 					"patterns": [
 						{
 							"include": "#line_comment"
+						},
+						{
+							"include": "#pub_keyword"
 						},
 						{
 							"match": "\\b([A-Z][A-Za-z0-9_]*)\\b",
