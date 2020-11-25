@@ -70,7 +70,7 @@
           "name": "keyword.operator.spec-ir"
         },
         {
-          "match": "\\b(func|variant|custom|mut|immut|call|branch|let|in|tuple|field|type|wrap|unwrap|item|len|push|pop|replace|input|output|panic)\\b",
+          "match": "\\b(func|variant|custom|mut|immut|call|branch|let|in|tuple|field|type|wrap|unwrap|item|len|push|pop|replace|reserve|input|output|panic|retain|release)\\b",
           "name": "keyword.spec-ir"
         }
       ]
@@ -92,6 +92,10 @@
         {
           "match": "'((\\.')|[^']*)'",
           "name": "string.quoted.single.spec-ir"
+        },
+        {
+          "match": "\"((\\.\")|[^']*)\"",
+          "name": "string.quoted.double.spec-ir"
         }
       ]
     }

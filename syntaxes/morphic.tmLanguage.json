@@ -95,6 +95,11 @@
 					"comment": "Int operators",
 					"match": "(\\+|\\-|\\*|/|<|>|(<=)|(>=))",
 					"name": "keyword.operator.morphic"
+				},
+				{
+					"comment": "Bool operators",
+					"match": "(\\!|\\&\\&|\\|\\|)",
+					"name": "keyword.operator.morphic"
 				}
 			]
 		},
