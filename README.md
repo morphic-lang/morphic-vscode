@@ -1,3 +1,3 @@
-# Morphic README
+# Morphic
 
-This extension provides syntax highlighting for the "Morphic" research language.
+This extension provides syntax highlighting for the [Morphic](https://github.com/morphic-lang/morphic) research language.

@@ -16,12 +16,6 @@
                 "aliases": ["Morphic", "morphic"],
                 "extensions": [".mor"],
                 "configuration": "./language-configuration.json"
-            },
-            {
-                "id": "morphic-spec-ir",
-                "aliases": ["Morphic Representation-Specialized IR"],
-                "extensions": [".repr-spec-ir"],
-                "configuration": "./repr-spec-ir-language-configuration.json"
             }
         ],
         "grammars": [
@@ -29,11 +23,6 @@
                 "language": "morphic",
                 "scopeName": "source.morphic",
                 "path": "./syntaxes/morphic.tmLanguage.json"
-            },
-            {
-                "language": "morphic-spec-ir",
-                "scopeName": "source.spec-ir",
-                "path": "./syntaxes/morphic-spec-ir.tmLanguage.json"
             }
         ]
     }
