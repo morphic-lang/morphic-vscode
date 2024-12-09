@@ -5,7 +5,8 @@
     "repository": "https://github.com/morphic-lang/morphic-vscode",
     "displayName": "Morphic",
     "description": "Syntax highlighting for the Morphic research language",
-    "version": "0.1.0",
+    "icon": "icon.png",
+    "version": "0.1.1",
     "engines": {
         "vscode": "^1.44.0"
     },
