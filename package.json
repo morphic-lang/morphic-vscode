@@ -1,8 +1,11 @@
 {
     "name": "morphic",
-    "displayName": "morphic",
-    "description": "Morphic syntax highlighting",
-    "version": "0.0.1",
+    "publisher": "morphic-lang",
+    "license": "SEE LICENSE IN LICENSE-MIT",
+    "repository": "https://github.com/morphic-lang/morphic-vscode",
+    "displayName": "Morphic",
+    "description": "Syntax highlighting for the Morphic research language",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.44.0"
     },
